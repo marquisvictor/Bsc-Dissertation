@@ -1,40 +1,476 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section id='fit-text'>
+				<h3>A FRAMEWORK TO DETERMINE WARD LEVEL POPULATION
+					FIGURES USING STATE-OF-THE-ART SPATIALLY
+					DISAGGREGATED POPULATION ESTIMATES, A CASE STUDY
+					OF LAGOS ISLAND.
+				</h3>
+			</section>
+
+			<!-- next section -->
+
+			<section>
+				<section>
+					About Me ?
+				</section>
+				<section id="fragments">
+					<ul>
+						<li>
+							<p>I'm Human and Nigerian</p>
+						</li>
+						<li class="fragment">
+							<p>Name is Victor Eromosele Irekponor</p>
+						</li>
+						<li class="fragment">
+							<p> Urban Planning undergrad at The University of
+								Lagos, Nigeria
+							</p>
+						</li>
+						<li class="fragment">
+							<p> Self-taught machine-learning software engineer </p>
+						</li>
+						<li class="fragment">
+							<p> Won a couple Machine Learning competitions </p>
+						</li>
+					</ul>
+
+				</section>
+			</section>
+
+			<!-- Backgound to study section -->
+
+			<section>
+				<section>
+					<h3>
+						Background of the study
+					</h3>
+				</section>
+				<section>
+					<p>decennial census data challenge</p>
+					<ul>
+						<li>cost</li>
+						<li>resources</li>
+						<li>political factors</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li>
+							<p>it becomes quite difficult to make effective and efficient plans with these census data
+							</p>
+						</li>
+						<li>
+
+							<p>it makes the accuracy of population projections questionable</p>
+						</li>
+					</ul>
+				</section>
+				<section id="fragments">
+					<h4> what is spatial disaggregation ? </h4>
+					<p class="fragment">
+						spatial disaggregation is the process of separating an entity into parts based
+						on some implicit spatial patterns or relationships (Moore, 2015). </p>
+				</section>
+
+				<section id="fragments">
+					<p>
+						Near accurate population data at micro-levels are essential for the:
+					</p>
+					<ul>
+						<li class="fragment">
+							planning and delivery of services
+						</li>
+						<li class="fragment">
+							Election preparation
+						</li>
+						<li class="fragment">
+							Estimation of populations at risk of hazards or infectious diseases
+						</li>
+						<li class="fragment">
+							Disaster relief operations amongst other use cases
+						</li>
+						<li class="fragment">
+							Determining housing needs
+						</li>
+						<li class="fragment">
+							Estimating the number of facilities and amenities needed such as health care,
+							transportation, schools, markets et cetera
+						</li>
+					</ul>
+				</section>
+				<section>
+					<img src='./css/image/compute.jpg' alt="logo profile"
+						style="width: 18rem; margin: 0 auto 1rem auto; background: transparent;" class="demo-logo">
+					<p>
+						recent advancements in compute power are presenting opportunities for
+						alternative approaches to producing reliable, spatially refined estimates of the human
+						population
+					</p>
+				</section>
+				<section>
+					This paper aims to develop a framework that can be used to determine the population estimates of a
+					geographical micro-level administrative boundary using spatially disaggregated population estimates
+					of a larger region.
+				</section>
+			</section>
+
+
+			<!-- Literature Review section -->
+
+			<section>
+				<section>
+					<h3>Background Literature </h3>
+				</section>
+				<section>
+					<p>According to Eurostat (2010), a population census is a series of processes that involve the total
+						collection, compilation, evaluation, analysis, and release of demographic, economic, and social
+						data pertaining to people living within a specific geographic location</p>
+				</section>
+				<section>
+					<h4> Aim of Population census </h4>
+					<ul>
+						<li class="fragment">
+							Enumerate the number of persons in a geographic jurisdiction
+						</li>
+						<li class="fragment">
+							Provide specific information at housing unit level
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4> Approaches to conducting a Population census </h4>
+
+					<p class="fragment">Valente (2010) broadly classified the approaches to conducting a population
+						census into two broad categories:</p>
+					<ul>
+						<li class="fragment">
+							Traditional census approach
+						</li>
+						<li class="fragment">
+							Alternative census aproaches
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h5>Tradition Census Approaches</h5>
+				</section>
+				<section>
+					<h5>Alternative Census Approaches</h5>
+					<ul>
+						<li class="fragment">
+							Register-based and Rolling-based census approaches
+						</li>
+						<li class="fragment">
+							GIS-based census approach
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h4>The GIS-based Approach</h4>
+					<ul>
+						<li class="fragment">
+							<small> A more digital approach to getting very near-accurate estimates of the population
+								figure
+							</small>
+						</li>
+						<li class="fragment">
+							<small>
+								It was developed by motivated researchers in cases where inaccessibility or insecurity
+								issues
+								do not allow for census data to be collected, or in situations whereby the last census
+								conducted has become outdated
+							</small>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h6> The Geo-Referenced Infrastructure and Demographic Data for Development (GRID3) </h6>
+					<ul>
+						<li class="fragment">
+							Been running since 2018, funded by the bill and melinda gates foundation
+						</li>
+						<li class="fragment">
+							Primary aim of creating a geospatial database for the country; population, health
+							facilities, administrative, etc
+						</li>
+					</ul>
+				</section>
+
+				<section data-background-iframe="https://grid3.gov.ng/" data-background-interactive>
+					<div
+						style="position: absolute; width: 40%; right: 0; margin-top: 13rem; margin-right: 15rem; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<p>
+							The Geo-Referenced Infrastructure and Demographic Data for Development (GRID3) website for
+							Nigeria
+						</p>
+					</div>
+				</section>
+
+				<section id="fragments">
+					<h4> GRID3 Approaches </h4>
+					<ol>
+						<li class="fragment">
+							Top-down Approach
+						</li>
+						<li class="fragment">
+							Bottom-up Approach
+
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h4> Top-down Approach </h4>
+					<img src='./css/image/top down approach.JPG' alt="logo profile"
+						style="height: 15rem; margin: 0 auto 1rem auto; background: transparent;" class="demo-logo">
+					<small class="fragment">Relies heavily on previous population census</small>
+					<small class="fragment">Dasymetric modelling is done to disaggregate the population into 100m x 100m
+						grids </small>
+				</section>
+
+				<section>
+					<h4> Bottom-up Approach </h4>
+					<img src='./css/image/bottom up approach.JPG' alt="logo profile"
+						style="height: 15rem; margin: 0 auto 1rem auto; background: transparent;" class="demo-logo">
+					<small class="fragment">Relies heavily on previous micro-census instead</small>
+					<small class="fragment">statistical/machine learning modelling is done to disaggregate the
+						population into 100m x 100m
+						grids </small>
+				</section>
+
+			</section>
+
+
+
+			<!-- Methodology section -->
+
+			<section>
+				<section>
+					<h4>Methodology</h4>
+				</section>
+				<section>
+					<h4>Methodological Framework</h4>
+					<img src='./css/image/research methodology.JPG' alt="logo profile"
+						style="width: 35rem; margin: 4rem auto 1rem auto; background: transparent;" class="demo-logo">
+				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+			<section>
+				<a href="#">
+					<img src='./css/image/recentadv.webp' alt="logo profile"
+						style="height: 250px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+				</a>
+				<h3>Medium Profile View</h3>
+				<p>
+					<small>Created by <a href="https://medium.com/@irekponorvictor">Victor Irekponor</a></small>
+				</p>
+			</section>
+
+			<!-- next section -->
+
+			<section data-auto-animate>
+				<h2 data-id="code-title">Introduction</h2>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|4,8-11"><script type="text/template">
+						import React, { useState } from 'react';
+
+						function Example() {
+						  const [count, setCount] = useState(30);
+
+						  return (
+						    <div>
+							Hi I am Yudhajit Adhikary,writing technical Blog is my Passion ,
+							And Medium provides me the awesome oppurtunity to make it my Purpose .
+							I have written {count}+ articles so far. I write mostly
+							JavaScript and React Related Articles.
+						    </div>
+						  );
+						}
+					</script></code></pre>
+			</section>
+
+			<!-- next section -->
+
+			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+				<h2>Country</h2>
+				<div class="r-hstack justify-center">
+					<div data-id="box1"
+						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+					</div>
+					<div data-id="box2"
+						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+					</div>
+					<div data-id="box3"
+						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+					</div>
+			</section>
+
+			<!-- next section -->
+
+			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+				<div class="r-hstack justify-center">
+					<div data-id="box1" data-auto-animate-delay="0"
+						style="background:green; width: 150px; height: 100px; margin: 10px;"></div>
+					<div data-id="box2" data-auto-animate-delay="0.1"
+						style="background: white; width: 150px; height: 100px; margin: 10px;"></div>
+					<div data-id="box3" data-auto-animate-delay="0.2"
+						style="background:green; width: 150px; height: 100px; margin: 10px;"></div>
+				</div>
+				<h2 style="margin-top: 20px;">I am from Nigeria</h2>
+			</section>
+
+			<!-- next section -->
+
+			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+				<div class="r-stack">
+					<div data-id="box1" style="background:green; width: 300px; height: 300px; border-radius: 200px;">
+					</div>
+					<div data-id="box2" style="background: yellow; width: 200px; height: 200px; border-radius: 200px;">
+					</div>
+					<div data-id="box3" style="background: red; width: 100px; height: 100px; border-radius: 200px;">
+					</div>
+				</div>
+				<h2 style="margin-top: 20px;">Now I will give a quick overview of each of my Blogs</h2>
+			</section>
+
+			<!-- next section -->
+
+			<section data-markdown>
+				<script type="text/template">
+						## 1.Implementation of React Hooks, Context API and Reducer All-together
+
+						It is an introductory Article on React Context API and Hooks Concepts.[Read](https://medium.com/@yudhajitadhikary/implementation-of-react-hooks-context-api-reducer-all-together-bf2df11070b7?sk=492188d52b152be68d5bd7f49a787f06) 
+
+						```[]
+						<section data-markdown>
+							## 1.Implementation of React Hooks, Context API and Reducer All-together
+
+							It is an introductory Article on  React Context API and Hooks Concepts.[Read](https://medium.com/@yudhajitadhikary/implementation-of-react-hooks-context-api-reducer-all-together-bf2df11070b7?sk=492188d52b152be68d5bd7f49a787f06) 
+	
+						</section>
+						```
+					</script>
+			</section>
+
+			<!-- next section -->
+
+			<section>
+				<section id="fragments">
+					<h2>Articles</h2>
+					<p class="fragment">2.Creation of React Forms with Formik & Yup together.<a
+							href='https://medium.com/@yudhajitadhikary/formik-yup-together-makes-creation-of-react-forms-easier-6c9cf91dab50?sk=222cf6b8c3cc0dc14d21be4725d01430'>Read</a>
+					</p>
+					<p class="fragment">3.Creating a Chat Application using Express and Websocket.<a
+							href='https://medium.com/@yudhajitadhikary/creating-chat-application-using-express-and-websockets-ed567339c4d5?sk=1f606bb682151c29032034152b1cb15b'>Read</a>
+					</p>
+					<p class="fragment">4.Creating ChatBot using Dialogflow and React Redux.<a
+							href='https://medium.com/@yudhajitadhikary/creating-chatbot-using-dialogflow-and-react-redux-a5bea19da71d?sk=4645c880d4fc2c845893ec2fda884766'>Read</a>
+					</p>
+
+
+					<aside class="notes">
+						I request to have look into those Article ,I seeking for your valuable feedbacks
+					</aside>
+				</section>
+				<section>
+					<h2>Continued..</h2>
+					<p class="fragment grow">5.Isomorphic Implementation of React.<a
+							href='https://medium.com/@yudhajitadhikary/isomorphic-implementation-of-react-fa6e129c246f?sk=f529628a6cd6d6cf3af349f8eaf5c608'>Read</a>
+					</p>
+					<p class="fragment shrink">6.Third Party Login using OAuth & Passport.JS<a
+							href='https://medium.com/@yudhajitadhikary/third-party-login-using-oauth-passport-js-91cf5c896eb?sk=58302810fa35cbc546e6743caaae956c'>Read</a>
+					</p>
+					<p class="fragment fade-out">7.Implementation of Drag & Drop using React Beautiful DND and Material
+						Ui.<a
+							href='https://medium.com/@yudhajitadhikary/implementation-of-drag-drop-using-react-beautiful-dnd-and-material-ui-465be23b1bd9?sk=f08c9d2820e342c50166959e4be2d4cb'>Read</a>
+					</p>
+
+				</section>
+				<section>
+					<h2>Continued..</h2>
+					<p class="fragment fade-right">8.Why I choose Muuri over all other React packages for implementing
+						Drag and Drop.<a
+							href='https://medium.com/@yudhajitadhikary/why-i-choose-muuri-over-all-other-react-packages-for-implementing-drag-and-drop-3a8ba327f21e?sk=b9003eb2f364f5c0b8d49866e43aa09c'>Read</a>
+					</p>
+					<p class="fragment fade-up">9.Basic Concepts and Implementation of Mobx.<a
+							href='https://medium.com/@yudhajitadhikary/basic-concepts-and-implementation-of-mobx-632607e85854?sk=489d2f8fa2c489c78dbadf310b399f95'>Read</a>
+					</p>
+				</section>
+				<section>
+					<h2>Continued..</h2>
+					<p class="fragment fade-down">10.How to Create Progressive Web Application using Service Worker in
+						JavaScript.<a
+							href='https://medium.com/@yudhajitadhikary/creating-progressive-web-application-in-react-cb81a938c61c?sk=81d54297ad2d5478e16059a51ff7955b'>Read</a>
+					</p>
+					<p class="fragment fade-left">11.Client Side Rendering Vs Server Side Rendering in React js & Next
+						js<a
+							href='https://medium.com/@yudhajitadhikary/client-side-rendering-vs-server-side-rendering-in-react-js-next-js-b74b909c7c51?sk=55e4130bc719d2e666fb90bd01cc5f5d'>Read</a>
+					</p>
+				</section>
+				<section>
+					<h2>Continued..</h2>
+					<p class="fragment fade-in-then-out">12.How to create Reactive Forms Using Data driven Forms in
+						React.<a
+							href='https://medium.com/@yudhajitadhikary/how-to-create-reactive-forms-using-data-driven-forms-in-react-be551a774ff1?sk=3cc62fcca90e7ce7b272216853f163f7'>Read</a>
+					</p>
+					<p class="fragment fade-in-then-semi-out">13.Optimize Your Code by using React Virtualized.<a
+							href='https://medium.com/@yudhajitadhikary/optimize-your-code-by-using-react-virtualized-a9c814031c27?sk=e20ed8d7eae870d76e5f08ae9c115f85'>Read</a>
+					</p>
+				</section>
+			</section>
+
+			<section>Slide 4</section>
+			<section>Slide 5</section>
+
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
