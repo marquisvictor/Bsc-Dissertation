@@ -7,6 +7,7 @@ out/
 .svn
 log/*.log
 tmp/**
-node_modules/
+node_modules
 .sass-cache
+.github/
 dist/*.map
