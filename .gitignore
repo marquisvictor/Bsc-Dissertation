@@ -2,8 +2,10 @@
 *.iml
 *.iws
 *.eml
+*.github
 out/
 .DS_Store
+.github
 .svn
 log/*.log
 tmp/**
